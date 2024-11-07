@@ -24,8 +24,8 @@ function FavouritesResult() {
                     storedQueries.map(async(query) => {
                         const [baseCurrency, targetCurrency, amount] = query.split('/');
                         const response = await exchangeRateService({
-                            from:baseCurrency,
-                            to:targetCurrency,
+                            from: baseCurrency,
+                            to: targetCurrency,
                             amount: amount
                         })
                         const formattedResponse = {
@@ -87,7 +87,7 @@ function FavouritesResult() {
         ))}
         </div>
     ):
-    <p className='text-white w-fit mx-auto h-fit my-auto text-center text-lg'>No favourite currency selections yet</p>
+    <p className='text-white w-fit mx-auto h-fit my-auto text-center text-lg'>No bookmarked currency conversions yet</p>
     }
     </>
   )

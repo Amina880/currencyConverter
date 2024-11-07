@@ -24,9 +24,9 @@ function SearchResults() {
             try {
                 //Fetches the commad, and fixed decimal point conversion results using values from the convert query
                 const response = await exchangeRateService({
-                    from:baseCurrency, 
-                    to:targetCurrency,
-                    amount:amount
+                    from: baseCurrency, 
+                    to: targetCurrency,
+                    amount: amount
                 })  
                 const formattedResponse = {
                     ...response,
