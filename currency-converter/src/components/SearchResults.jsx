@@ -61,13 +61,13 @@ function SearchResults() {
         <p>Convert {parseFloat(amount).toLocaleString()}  {conversionResults.base_code} to {conversionResults.target_code}</p>
     </div>
     {/*Conversion Results */}
-    <div className='w-11/12 sm:w-8/12 sm:px-8 sm:flex-grow-0  mx-auto justify-center bg-white rounded-2xl px-3 pt-2 flex-grow mt-3 pb-5 '>
+    <div className='w-11/12 sm:w-8/12 sm:px-8 sm:flex-grow-0  mx-auto justify-center bg-white dark:bg-slate-400 dark:text-white rounded-2xl px-3 pt-2 flex-grow mt-3 pb-5 '>
         <div className='flex justify-between '>
             <p className=' text-lg pt-6 font-normal pb-3'>{parseFloat(amount).toLocaleString()}  {conversionResults.base_code} = <br></br>  <span className='font-semibold text-3xl '>{conversionResults.conversion_result} {conversionResults.target_code}</span></p>
             <FavouriteButton />
         </div>
-        <p className='font-light pt-0.5'>1 {conversionResults.base_code} = {conversionResults.conversion_rate} {conversionResults.target_code}</p>
-        <p className='font-light py-1.5'>Last updated - {conversionResults.time_last_update_utc}</p>
+        <p className='font-light pt-0.5 dark:text-slate-200'>1 {conversionResults.base_code} = {conversionResults.conversion_rate} {conversionResults.target_code}</p>
+        <p className='font-light py-1.5 dark:text-slate-200'>Last updated - {conversionResults.time_last_update_utc}</p>
     </div>
     <CurrencySelector/>
     

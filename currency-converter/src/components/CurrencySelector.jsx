@@ -69,16 +69,16 @@ function CurrencySelector() {
   return (
     <>
     {/*Form containing amount input and currency selectors */}
-    <form onSubmit={onConvert} className='w-11/12 sm:w-8/12 mx-auto justify-center bg-white rounded-2xl px-6 pt-4 flex-grow mt-4 pb-5 sm:flex-grow-0 '>
+    <form onSubmit={onConvert} className='w-11/12 sm:w-8/12 mx-auto justify-center bg-white dark:bg-slate-400 rounded-2xl px-6 pt-4 flex-grow mt-4 pb-5 sm:flex-grow-0 '>
         {/*Header conditionally rendered in Home page only */}
-        {location.pathname === '/' && <h1 className='text-2xl sm:text-3xl sm:font-light font-light text-center py-2'>Currency Converter</h1>}
+        {location.pathname === '/' && <h1 className='text-2xl sm:text-3xl sm:font-light font-light text-center py-2 dark:text-white'>Currency Converter</h1>}
         <div className=' mt-6 sm:flex sm:justify-evenly sm:mx-auto sm:items-center sm:w-full sm:mt-3'>
             {/* Amount Input */}
             <div className='sm:flex sm:flex-col sm:h-[70px] sm:w-2/6 sm:mx-1'>
-                <label htmlFor='amount' className='mt-4 sm:m-0 sm:text-lg font-normal'>Amount:</label>
+                <label htmlFor='amount' className='mt-4 sm:m-0 sm:text-lg font-normal dark:text-white'>Amount:</label>
                 <input
                 id='amount'
-                className='w-full mx-auto sm:mx-0 border-slate-200 border-2 rounded p-4 sm:p-0 sm:h-[42px] font-shippori text-lg font-semibold'
+                className='w-full mx-auto sm:mx-0 border-slate-200 dark:border-slate-100 border-2 rounded p-4 sm:p-0 sm:h-[42px] font-shippori text-lg font-semibold'
                 type='number'
                 value={amount}
                 placeholder='Enter amount'
@@ -89,11 +89,11 @@ function CurrencySelector() {
                 }}
                 required
                 />
-                {errors.amount && <p className='text-white w-fit mx-auto h-fit my-auto text-center text-lg'>{errors.amount}</p>}
+                {errors.amount && <p className='text-white w-fit mx-auto h-fit my-auto text-center text-lg '>{errors.amount}</p>}
             </div>
             {/* Base Currency Selector */}
             <div className='my-4 w-full mx-auto sm:mx-1 sm:w-2/6 '>
-                <label className='sm:text-lg font-normal'>From:</label>
+                <label className='sm:text-lg font-normal dark:text-white'>From:</label>
                 <Select
                 className='font-shippori text-lg '
                 options={currencyOptions}
@@ -105,11 +105,12 @@ function CurrencySelector() {
                 noOptionsMessage={() => "No currency found"}
                 id='from'
                 />
+                {errors.baseCurrency && <p className='text-red-400 dark:text-red-300 text-sm sm:text-base'>{errors.baseCurrency}</p>}
+
             </div>
-            {errors.baseCurrency && <p className='text-red-400 text-sm'>{errors.baseCurrency}</p>}
             {/* Target Currency Selector */}
             <div className='my-4 w-full sm:w-2/6 mx-auto sm:mx-1'>
-                <label className='sm:text-lg font-normal' >To:</label>
+                <label className='sm:text-lg font-normal dark:text-white' >To:</label>
                 <Select 
                 className='font-shippori text-lg'
                 options={currencyOptions}
@@ -121,10 +122,11 @@ function CurrencySelector() {
                 noOptionsMessage={() => "No currency found"}
                 id='to'
                 />
+                {errors.targetCurrency && <p className='text-red-400 dark:text-red-300 text-sm sm:text-base'>{errors.targetCurrency}</p>}
+
             </div>
-            {errors.targetCurrency && <p className='text-red-400 text-sm'>{errors.targetCurrency}</p>}
         </div>
-        <button className='my-4 items-center mx-auto w-full sm:w-44 sm:h-10 sm:my-2 sm:float-end p-2 hover:border-blue-300 bg-sky-500 hover:border-2 rounded-xl text-white' type='submit'>Convert</button>
+        <button className='my-4 items-center mx-auto w-full sm:w-44 sm:h-10 sm:my-2 sm:float-end p-2 hover:border-blue-300 dark:hover:border-blue-400 bg-sky-500 hover:border-2 rounded-xl text-white' type='submit'>Convert</button>
     </form>
     </>
   )

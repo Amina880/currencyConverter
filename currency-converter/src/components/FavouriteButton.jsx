@@ -38,7 +38,7 @@ function FavouriteButton() {
     <div className='px-3 pt-5'>
       <button type='submit' onClick={onClick}>
         {/*If the convert query is already favourited, show red heart and if not, show black empty heart */}
-        <LucideHeart color={isFavourited ? 'red' : 'black'} fill={isFavourited ? 'red' : 'none'} className='hover:fill-red-400 hover:stroke-red-400'/>
+        <LucideHeart color={isFavourited ? 'red' : 'black'} fill={isFavourited ? 'red' : 'none'} className='hover:fill-red-400 hover:stroke-red-400 dark:stroke-white'/>
       </button>
     </div>
     </>

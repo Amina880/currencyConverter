@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import DarkModeToggle from './DarkModeToggle';
 
 function Nav() {
     //Toggling navbar
@@ -17,6 +18,7 @@ function Nav() {
             <div className='sm:flex sm:justify-evenly w-1/3'>
                 <Link to="/" className=' text-white'>Home</Link>
                 <Link to="/favourites" className=' text-white'>Favourites</Link>
+                <DarkModeToggle />
             </div>
         </div>
 
@@ -25,9 +27,12 @@ function Nav() {
                 <Link to="/">
                 <img className='w-20' src="/images/currency-converter-favicon-color.png" alt='logo'/>
                 </Link>
-                <button onClick={toggleNav}>
-                    {isOpen ? <X color='white' className='w-20' /> : <Menu color='white' className='w-20 '/>}
-                </button>
+                <div className='flex justify-evenly w-1/3'>
+                    <button onClick={toggleNav}>
+                        {isOpen ? <X color='white' className='w-20' /> : <Menu color='white' className='w-20 '/>}
+                    </button>
+                    <DarkModeToggle />
+                </div>
             </div>
             {/*Mobile Links */}
             {isOpen && (
