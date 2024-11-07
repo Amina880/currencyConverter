@@ -12,7 +12,7 @@ function Nav() {
     {/*Nav for larger screens */}
         <div className='hidden sm:flex sm:items-center sm:justify-between'>
             <Link to="/">
-            <img className='w-20 sm:w-32' src="/public/images/currency-converter-favicon-color.png" alt='logo'/>
+            <img className='w-20 sm:w-32' src="/images/currency-converter-favicon-color.png" alt='logo'/>
             </Link>
             <div className='sm:flex sm:justify-evenly w-1/3'>
                 <Link to="/" className=' text-white'>Home</Link>
@@ -23,7 +23,7 @@ function Nav() {
     {/*Nav for mobile screens */}
             <div className='sm:hidden flex justify-between'>
                 <Link to="/">
-                <img className='w-20' src="/public/images/currency-converter-favicon-color.png" alt='logo'/>
+                <img className='w-20' src="/images/currency-converter-favicon-color.png" alt='logo'/>
                 </Link>
                 <button onClick={toggleNav}>
                     {isOpen ? <X color='white' className='w-20' /> : <Menu color='white' className='w-20 '/>}
