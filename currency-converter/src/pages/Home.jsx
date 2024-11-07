@@ -1,5 +1,5 @@
 import React from 'react'
-import CurrencySelector from '../components/currencySelector'
+import CurrencySelector from '../components/CurrencySelector'
 import Layout from '../components/Layout'
 
 

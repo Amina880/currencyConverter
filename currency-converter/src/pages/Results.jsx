@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchResults from '../components/searchResults'
+import SearchResults from '../components/SearchResults'
 import Layout from '../components/Layout'
 
 
