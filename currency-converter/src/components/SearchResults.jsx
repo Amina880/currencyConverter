@@ -4,7 +4,7 @@ import { useState } from 'react';
 import exchangeRateService from '../services/exchangeRateService';
 import { LucideLoader } from 'lucide-react';
 import FavouriteButton from './FavouriteButton';
-import CurrencySelector from './currencySelector';
+import CurrencySelector from './CurrencySelector';
 
 function SearchResults() {
     //Get the search/convert query from the url or local storage if persisting

@@ -1,5 +1,5 @@
-import SearchResults from "../components/searchResults";
-import CurrencySelector from "../components/currencySelector";
+import SearchResults from "../components/SearchResults";
+import CurrencySelector from "../components/CurrencySelector";
 import { render, fireEvent, screen } from "@testing-library/react";
 import '@testing-library/jest-dom'
 
