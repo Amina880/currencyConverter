@@ -36,7 +36,7 @@ function Nav() {
             </div>
             {/*Mobile Links */}
             {isOpen && (
-                <div className='flex flex-col items-center justify-center w-full left-0 bg-white dark:bg-slate-400 dark:text-slate-100 space-y-4 h-screen underline underline-offset-4 decoration-1 decoration-slate-400 dark:decoration-white'>
+                <div className='flex flex-col items-center justify-center w-full left-0 bg-white dark:bg-slate-800 dark:text-slate-100 space-y-4 h-screen underline underline-offset-4 decoration-1 decoration-slate-400 dark:decoration-white'>
                 <Link to="/">Home</Link>
                 <Link to="/favourites">Favourites</Link>
                 </div>
