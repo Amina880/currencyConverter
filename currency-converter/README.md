@@ -16,5 +16,6 @@ Currency Conversion Functionality
 Displays Exchange Rate Information
 Bookmarked Currency Conversions 
 Responsive UI Design
+Dark mode
 Error Handling
 

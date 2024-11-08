@@ -66,13 +66,13 @@ function FavouritesResult() {
     </div>
     {/*Renders each query's conversion results only when currency data is not empty  */}
     {currencyData.length > 0 ? (
-        <div className='w-11/12 sm:w-8/12 mx-auto justify-center bg-white dark:bg-slate-800 rounded-2xl px-3 sm:p-8 pt-4 flex-grow sm:flex-grow-0 mt-3 pb-5 sm:pb-20 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6'>
+        <div className='w-11/12 sm:w-9/12 mx-auto justify-center bg-white dark:bg-slate-800 rounded-2xl px-3 sm:p-8 pt-4  sm:flex-grow-0 mt-3 pb-5 sm:pb-20 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6'>
         {currencyData.map((currencyD, index) => (
             <Link 
             to={`/results?s=${currencyD.base_code}/${currencyD.target_code}/${currencyD.amount}`}
             key={index}
             >
-                <div className='border-2 border-slate-200 rounded-md sm:rounded-lg hover:shadow-xl hover:scale-105 dark:bg-slate-300 dark:text-gray-900  ' key={index}> 
+                <div className=' w-full border-2 border-slate-200 rounded-md sm:rounded-lg hover:shadow-xl hover:scale-105 dark:bg-slate-300 dark:text-gray-900  ' key={index}> 
                     <div className='flex justify-center items-center my-2'>
                         <p className='font-medium text-xl'>{currencyD.base_code}</p>
                         <LucideArrowLeftRight className='mx-2' />
